@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-21 09:31+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: enginedata/models.py:12
+msgid "Module version number"
+msgstr "机组型号"
+
+#: enginedata/models.py:50
+msgid "middle"
+msgstr "中"
+
+#: enginedata/models.py:90
+msgid "°C intercooler water temperature"
+msgstr "°C 中冷水温度"
+
+#: enginedata/models.py:92
+msgid "compression ratio"
+msgstr "压缩比"
+
+#: enginedata/templates/base_generic.html:7
+msgid "Intelligent Selection Platform"
+msgstr "智能选型平台"
+
+#: enginedata/templates/base_generic.html:22
+msgid "Home"
+msgstr "主页"
+
+#: enginedata/templates/base_generic.html:23
+msgid "Module Selection"
+msgstr ""
+
+#: enginedata/templates/base_generic.html:24
+msgid "All Modules"
+msgstr ""
+
+#: enginedata/templates/base_generic.html:25
+msgid "All Technical Specifications"
+msgstr "所有技术文件"
+
+#: enginedata/templates/base_generic.html:26
+msgid "About This Site"
+msgstr "关于本站"
+
+#: enginedata/templates/index.html:6
+msgid "Knowledge Warehouse"
+msgstr ""
+
+#: enginedata/templates/index.html:7
+msgid ""
+"Welcome to the K.W., a website developed by <em>Jereh Combined Energy</em>!"
+msgstr ""
+
+#: sitedata/models.py:12
+msgid "Project name"
+msgstr "项目名称"
+
+#: sitedata/models.py:16
+msgid "Operating hours per day"
+msgstr "每天运行小时"
+
+#: sitedata/models.py:20
+msgid "Operating days per week"
+msgstr "每周运行天数"
+
+#: sitedata/models.py:24
+msgid "Operating weeks per year"
+msgstr "每年运行周数"
+
+#: sitedata/models.py:28
+msgid "Alitude (m)"
+msgstr "海拔(m)"
+
+#: sitedata/models.py:32
+msgid "Summer design temperature"
+msgstr "夏季设计温度"
+
+#: sitedata/models.py:36
+msgid "Winter design temperature"
+msgstr "冬季设计温度"
+
+#: sitedata/models.py:53
+msgid "grid parallel without power injecting"
+msgstr ""
+
+#: sitedata/models.py:57
+msgid "Service voltage (kV)"
+msgstr "电网电压(kV)"
+
+#: sitedata/models.py:61
+msgid "Average electric demand January (kW)"
+msgstr "一月份平均电负荷(kW)"
+
+#: sitedata/models.py:65
+msgid "Peak electric demand January (kW)"
+msgstr "一月份尖峰电负荷(kW)"

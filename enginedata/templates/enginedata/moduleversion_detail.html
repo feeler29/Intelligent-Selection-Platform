@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+{% load i18n %}
+{% block content %}
+  <h1>Module Detail </h1>
+
+  <p><strong>Version:</strong> <a href="{% url 'ts-detail' moduleversion.version.pk %}">{{ moduleversion.version }}</a></p> 
+  <p><strong>Manufacturer:</strong> {{ moduleversion.manufacturer }}</p>
+  <p><strong>Frequency:</strong> {{ moduleversion.frequency }} Hz</p> 
+  <p><strong>NOx_emission:</strong> {{ moduleversion.NOx }} </p>  
+  <p><strong>Gas_type:</strong> {{ moduleversion.gas_type }}</p>  
+
+  <div style="margin-left:20px;margin-top:20px">
+    <!-- <h4>Copies</h4>
+
+    {% for copy in book.bookinstance_set.all %}
+      <hr>
+      <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">{{ copy.get_status_display }}</p>
+      {% if copy.status != 'a' %}
+        <p><strong>Due to be returned:</strong> {{copy.due_back}}</p>
+      {% endif %}
+      <p><strong>Imprint:</strong> {{copy.imprint}}</p>
+      <p class="text-muted"><strong>Id:</strong> {{copy.id}}</p>
+    {% endfor %} -->
+  </div>
+{% endblock %}

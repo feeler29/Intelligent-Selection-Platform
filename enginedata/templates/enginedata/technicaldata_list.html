@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% load i18n %}
+{% block content %}
+  <h1>Technical Specification List</h1>
+  {% if technicaldata_list %}
+  <ul>
+    {% for technicaldata in technicaldata_list %}
+      <li>
+        <a href="{{ technicaldata.get_absolute_url }}">{{ technicaldata.name }}</a> ({{technicaldata.electrical_output}}kW) ({{technicaldata.fuel_gas_type}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no technical data in the database.</p>
+  {% endif %}       
+{% endblock %}
