@@ -121,7 +121,7 @@ class ThermalLoads(models.Model):
     majorload = models.CharField(
  		max_length=100,
  		choices=load_type,
- 		blank=true,
+ 		blank=True,
  		)
 
     steamDemand_max = models.FloatField(
