@@ -86,9 +86,9 @@ class FuelUseData(models.Model):
     	)
 
     fuel_type = (
-        ('natural gas','natural gas'),
-        ('coal','coal'),
-        ('oil','oil'),
+        ('natural gas',_('natural gas')),
+        ('coal',_('coal')),
+        ('oil',_('oil')),
 	)
 
     primaryfuel = models.CharField(
@@ -148,4 +148,4 @@ class ThermalLoads(models.Model):
 
     def __str__(self):
 
-		return self.projectname
+        return self.projectname
