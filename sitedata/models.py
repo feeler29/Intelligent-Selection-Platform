@@ -127,12 +127,12 @@ class ThermalLoads(models.Model):
  		blank=True,
  		)
 
-    steamDemand_max = models.FloatField(
+    steamdemand_max = models.FloatField(
  		verbose_name=_('Maximum Steam Demand (t/h)')
 
  		)
 
-    steamDemand_ave = models.FloatField(
+    steamdemand_ave = models.FloatField(
  		verbose_name=_('Average Steam Demand')
  		)
 
@@ -146,7 +146,8 @@ class ThermalLoads(models.Model):
 
     track = models.BooleanField(
  		verbose_name=_('Track'),
- 		help_text=_('do themal loads generally track electric loads')
+ 		help_text=_('do themal loads generally track electric loads'),
+ 		default=False
  		)
 
     def __str__(self):
