@@ -68,9 +68,9 @@ class ElectricUseData(models.Model):
 		verbose_name=_('Peak electric demand January (kW)')
 		)
 
-	elec_consum = models.FloatField(
-		verbose_name=_('Electric consumption (kWh)')
-		)
+	# elec_consum = models.FloatField(
+	# 	verbose_name=_('Electric consumption (kWh)')
+	# 	)
 
 	def __str__(self):
 
