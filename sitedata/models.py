@@ -94,7 +94,7 @@ class FuelUseData(models.Model):
     primaryfuel = models.CharField(
         max_length=100,
         choices=fuel_type,
-        blank=true,
+        blank=True,
         )
 
     def __str__(self):
