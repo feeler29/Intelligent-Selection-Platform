@@ -89,7 +89,7 @@ class FuelUseData(models.Model):
 		('natural gas','natural gas'),
 		('coal','coal'),
 		('oil','oil'),
-		)
+	)
 
 	primaryfuel = models.CharField(
 		max_length=100,
@@ -116,7 +116,7 @@ class ThermalLoads(models.Model):
 		('process steam','process steam'),
 		('sterilization','sterilization'),
 		('space heating','space heating'),
-		)
+	)
  
  	majorload = models.CharField(
  		max_length=100,
