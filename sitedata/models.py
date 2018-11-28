@@ -68,13 +68,13 @@ class ElectricUseData(models.Model):
 		verbose_name=_('Peak electric demand January (kW)')
 		)
 
-    elec_consum = models.FloatField(
-    	verbose_name=_('Electric consumption (kWh)')
-    	)
+	elec_consum = models.FloatField(
+		verbose_name=_('Electric consumption (kWh)')
+		)
 
-    def __str__(self):
+	def __str__(self):
 
-    	return self.projectname
+		return self.projectname
 
 
 
@@ -85,21 +85,21 @@ class FuelUseData(models.Model):
     	on_delete=models.CASCADE,
     	)
 
-    fuel_type=(
-    	(_('natural gas'),_('natural gas')),
-    	(_('coal'),_('coal')),
-    	(_('oil'),_('oil')),
-    	)
+	fuel_type=(
+		(_('natural gas'),_('natural gas')),
+		(_('coal'),_('coal')),
+		(_('oil'),_('oil')),
+		)
 
-    primaryfuel = models.CharField(
-    	max_length=100,
-    	choices=fuel_type,
-    	blank=true,
-    	)
+	primaryfuel = models.CharField(
+		max_length=100,
+		choices=fuel_type,
+		blank=true,
+		)
 
-    def __str__(self):
+	def __str__(self):
 
-    	return self.projectname
+		return self.projectname
 
 
 
@@ -107,9 +107,9 @@ class FuelUseData(models.Model):
 class ThermalLoads(models.Model):
 
 	projectname = models.ForeignKey(
-    	'SiteData',
-    	on_delete=models.CASCADE,
-    	)
+		'SiteData',
+ 		on_delete=models.CASCADE,
+		)
 
 	load_type=(
 		(_('hot water'),_('hot water')),
@@ -148,4 +148,4 @@ class ThermalLoads(models.Model):
 
 	def __str__(self):
 
-    	return self.projectname
+		return self.projectname
