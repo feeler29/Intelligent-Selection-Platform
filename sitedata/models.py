@@ -25,15 +25,18 @@ class SiteData(models.Model):
 		)
 
 	alitude = models.IntegerField(
-		verbose_name=_('Alitude (m)')
+		verbose_name=_('Alitude (m)'),
+		default=900,
 		)
 
 	summer_temp = models.FloatField(
-		verbose_name=_('Summer design temperature')
+		verbose_name=_('Summer design temperature'),
+		default=30,
 		)
 
 	winter_temp = models.FloatField(
-		verbose_name=_('Winter design temperature')
+		verbose_name=_('Winter design temperature'),
+		default=-10,
 		)
 
 
@@ -49,7 +52,7 @@ class ElectricUseData(models.Model):
 		on_delete=models.CASCADE,
 		)
 
-	grid_parallel = models.BooleanField(
+	grid_mode = models.BooleanField(
 		verbose_name=_('grid parallel without power injecting')
 		)
 
@@ -57,26 +60,92 @@ class ElectricUseData(models.Model):
 		verbose_name=_('Service voltage (kV)')
 		)
 
-	Ave_Elec_Demand_Jan = models.FloatField(
+	ave_elec_demand_Jan = models.FloatField(
 		verbose_name=_('Average electric demand January (kW)')
 		)
 
-	Peak_Elec_Demand_Jan = models.FloatField(
+	peak_dlec_demand_Jan = models.FloatField(
 		verbose_name=_('Peak electric demand January (kW)')
 		)
     
-    # Elec_Consum = models.FloatField(
-    # 	verbose_name=_('Electric consumption (kWh)')
-    # 	)
-    # def __str__(self):
+    elec_consum = models.FloatField(
+    	verbose_name=_('Electric consumption (kWh)')
+    	)
 
-    # 	return self.projectname
+    def __str__(self):
+
+    	return self.projectname
+
 
 
 class FuelUseData(models.Model):
-    pass
+    
+    projectname = models.ForeignKey(
+    	'SiteData',
+    	on_delete=models.CASCADE,
+    	)
+
+    fuel_type=(
+    	(_('natural gas'),_('natural gas')),
+    	(_('coal'),_('coal')),
+    	(_('oil'),_('oil')),
+    	)
+
+    primaryfuel = models.CharField(
+    	max_length=100,
+    	choices=fuel_type,
+    	blank=true,
+    	)
+
+    def __str__(self):
+
+    	return self.projectname
+
+
 
 
 class ThermalLoads(models.Model):
 
-	pass
+	projectname = models.ForeignKey(
+    	'SiteData',
+    	on_delete=models.CASCADE,
+    	)
+
+	load_type=(
+		(_('hot water'),_('hot water')),
+		(_('process steam'),_('process steam')),
+		(_('sterilization'),_('sterilization')),
+		(_('space heating'),_('space heating')),
+		)
+ 
+ 	majorload = models.CharField(
+ 		max_length=100,
+ 		choices=load_type,
+ 		blank=true,
+ 		)
+
+ 	steamDemand_max = models.FloatField(
+ 		verbose_name=_('Maximum Steam Demand (t/h)')
+
+ 		)
+
+ 	steamDemand_ave = models.FloatField(
+ 		verbose_name=_('Average Steam Demand')
+ 		)
+
+ 	steam_temp = models.FloatField(
+ 		verbose_name=_('Required Steam Temperature')
+ 		)
+
+ 	steam_press = models.FloatField(
+ 		verbose_name=_('Required Steam Pressure')
+ 		)
+
+ 	track = models.BooleanField(
+ 		verbose_name=_('Track'),
+ 		help_text=_('do themal loads generally track electric loads')
+ 		)
+
+	def __str__(self):
+
+    	return self.projectname
