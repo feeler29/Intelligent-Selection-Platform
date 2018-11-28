@@ -68,9 +68,9 @@ class ElectricUseData(models.Model):
 		verbose_name=_('Peak electric demand January (kW)')
 		)
 
-	# elec_consum = models.FloatField(
-	# 	verbose_name=_('Electric consumption (kWh)')
-	# 	)
+    elec_consum = models.FloatField(
+        verbose_name=_('Electric consumption (kWh)')
+        )
 
 	def __str__(self):
 
@@ -85,19 +85,19 @@ class FuelUseData(models.Model):
     	on_delete=models.CASCADE,
     	)
 
-	fuel_type=(
-		('natural gas','natural gas'),
-		('coal','coal'),
-		('oil','oil'),
+    fuel_type = (
+        ('natural gas','natural gas'),
+        ('coal','coal'),
+        ('oil','oil'),
 	)
 
 	primaryfuel = models.CharField(
-		max_length=100,
-		choices=fuel_type,
-		blank=true,
-		)
+        max_length=100,
+        choices=fuel_type,
+        blank=true,
+        )
 
-	def __str__(self):
+    def __str__(self):
 
 		return self.projectname
 
