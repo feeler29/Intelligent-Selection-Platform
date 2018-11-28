@@ -91,7 +91,7 @@ class FuelUseData(models.Model):
         ('oil','oil'),
 	)
 
-	primaryfuel = models.CharField(
+    primaryfuel = models.CharField(
         max_length=100,
         choices=fuel_type,
         blank=true,
@@ -106,46 +106,46 @@ class FuelUseData(models.Model):
 
 class ThermalLoads(models.Model):
 
-	projectname = models.ForeignKey(
+    projectname = models.ForeignKey(
 		'SiteData',
  		on_delete=models.CASCADE,
 		)
 
-	load_type=(
+    load_type=(
 		('hot water','hot water'),
 		('process steam','process steam'),
 		('sterilization','sterilization'),
 		('space heating','space heating'),
 	)
  
- 	majorload = models.CharField(
+    majorload = models.CharField(
  		max_length=100,
  		choices=load_type,
  		blank=true,
  		)
 
- 	steamDemand_max = models.FloatField(
+    steamDemand_max = models.FloatField(
  		verbose_name=_('Maximum Steam Demand (t/h)')
 
  		)
 
- 	steamDemand_ave = models.FloatField(
+    steamDemand_ave = models.FloatField(
  		verbose_name=_('Average Steam Demand')
  		)
 
- 	steam_temp = models.FloatField(
+    steam_temp = models.FloatField(
  		verbose_name=_('Required Steam Temperature')
  		)
 
- 	steam_press = models.FloatField(
+    steam_press = models.FloatField(
  		verbose_name=_('Required Steam Pressure')
  		)
 
- 	track = models.BooleanField(
+    track = models.BooleanField(
  		verbose_name=_('Track'),
  		help_text=_('do themal loads generally track electric loads')
  		)
 
-	def __str__(self):
+    def __str__(self):
 
 		return self.projectname
