@@ -50,6 +50,7 @@ class ElectricUseData(models.Model):
 	projectname = models.ForeignKey(
 		'SiteData',
 		on_delete=models.CASCADE,
+		null=True
 		)
 
 	grid_mode = models.BooleanField(
@@ -83,6 +84,7 @@ class FuelUseData(models.Model):
     projectname = models.ForeignKey(
     	'SiteData',
     	on_delete=models.CASCADE,
+    	null=Ture
     	)
 
     fuel_type = (
@@ -109,6 +111,7 @@ class ThermalLoads(models.Model):
     projectname = models.ForeignKey(
 		'SiteData',
  		on_delete=models.CASCADE,
+ 		null=Ture
 		)
 
     load_type=(
