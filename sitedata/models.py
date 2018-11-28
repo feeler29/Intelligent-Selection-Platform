@@ -86,9 +86,9 @@ class FuelUseData(models.Model):
     	)
 
 	fuel_type=(
-		('natural gas',_('natural gas')),
-		('coal',_('coal')),
-		('oil',_('oil')),
+		('natural gas','natural gas'),
+		('coal','coal'),
+		('oil','oil'),
 		)
 
 	primaryfuel = models.CharField(
@@ -112,10 +112,10 @@ class ThermalLoads(models.Model):
 		)
 
 	load_type=(
-		('hot water',_('hot water')),
-		('process steam',_('process steam')),
-		('sterilization',_('sterilization')),
-		('space heating',_('space heating')),
+		('hot water','hot water'),
+		('process steam','process steam'),
+		('sterilization','sterilization'),
+		('space heating','space heating'),
 		)
  
  	majorload = models.CharField(
