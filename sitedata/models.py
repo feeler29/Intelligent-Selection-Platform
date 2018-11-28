@@ -99,7 +99,7 @@ class FuelUseData(models.Model):
 
     def __str__(self):
 
-		return self.projectname
+         return self.projectname
 
 
 
@@ -112,10 +112,10 @@ class ThermalLoads(models.Model):
 		)
 
     load_type=(
-		('hot water','hot water'),
-		('process steam','process steam'),
-		('sterilization','sterilization'),
-		('space heating','space heating'),
+		('hot water',_('hot water')),
+		('process steam',_('process steam')),
+		('sterilization',_('sterilization')),
+		('space heating',_('space heating')),
 	)
  
     majorload = models.CharField(
