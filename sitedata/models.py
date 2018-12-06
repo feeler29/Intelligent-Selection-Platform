@@ -87,17 +87,17 @@ class SiteData(models.Model):
 #     	null=True
 #     	)
 
-    # fuel_type = (
-    #     ('natural gas',_('natural gas')),
-    #     ('coal',_('coal')),
-    #     ('oil',_('oil')),
-    # )
+    fuel_type = (
+        ('natural gas',_('natural gas')),
+        ('coal',_('coal')),
+        ('oil',_('oil')),
+        )
 
-    # primaryfuel = models.CharField(
-    #     max_length=100,
-    #     choices=fuel_type,
-    #     blank=True,
-    #     )
+    primaryfuel = models.CharField(
+        max_length=100,
+        choices=fuel_type,
+        blank=True,
+        )
 
     # def __str__(self):
 
@@ -119,7 +119,7 @@ class SiteData(models.Model):
 		('process steam',_('process steam')),
 		('sterilization',_('sterilization')),
 		('space heating',_('space heating')),
-    )
+        )
  
     majorload = models.CharField(
  		max_length=100,
