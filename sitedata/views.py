@@ -28,12 +28,12 @@ class FuelDataCreate(CreateView):
 class ThermalDataCreate(CreateView):
 	model = ThermalLoads
 	fields = '__all__'
-	success_url = reverse_lazy('result')
+	success_url = reverse_lazy('result',args=[pk])
 
 def Result(request,pk):
 
-	site = get_object_or_404(SiteData,pk=pk)
-	electric = get_object_or_404(ElectricUseData,projectname='site.projectname')
+	thermal = get_object_or_404(ThermalLoads,pk=pk)
+	electric = get_object_or_404(ElectricUseData,projectname='thermal.projectname')
 
 	context = {
 	'electric':electric,
