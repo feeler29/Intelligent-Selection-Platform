@@ -14,8 +14,7 @@ class SiteDataCreate(CreateView):
 class SiteDataUpdate(UpdateView):
 	model = SiteData
 	fields = '__all__'
-	def get_absolute_url(self):
-		return reverse('result',kwargs={'pk':self.pk})
+
 
 # class ElectricDataCreate(CreateView):
 # 	model = ElectricUseData
