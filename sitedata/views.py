@@ -9,7 +9,7 @@ from sitedata.models import SiteData,ElectricUseData,FuelUseData,ThermalLoads
 class SiteDataCreate(CreateView):
 	model = SiteData
 	fields = '__all__'
-	success_url = reverse_lazy('electric_data_create')
+	success_url = reverse_lazy('electric_data_update')
 
 class SiteDataUpdate(UpdateView):
 	model = SiteData
@@ -42,8 +42,10 @@ class ThermalDataUpdate(UpdateView):
 def Result(request,pk):
 
 	site = get_object_or_404(SiteData,pk=pk)
+
+	projectname=site.projectname
 	#thermal = get_object_or_404(ThermalLoads,projectname=name)
-	electric = get_object_or_404(ElectricUseData,projectname='site.projectname')
+	electric = get_object_or_404(ElectricUseData,projectname='projectname')
 
 	context = {
 	'electric':electric,

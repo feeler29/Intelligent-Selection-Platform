@@ -40,18 +40,18 @@ class SiteData(models.Model):
 		)
 
 
-	def __str__(self):
+# 	def __str__(self):
 
-		return self.projectname
+# 		return self.projectname
 
 
-class ElectricUseData(models.Model):
+# class ElectricUseData(models.Model):
 
-	projectname = models.ForeignKey(
-		'SiteData',
-		on_delete=models.CASCADE,
-		null=True
-		)
+# 	projectname = models.ForeignKey(
+# 		'SiteData',
+# 		on_delete=models.CASCADE,
+# 		null=True
+# 		)
 
 	grid_mode = models.BooleanField(
 		verbose_name=_('grid parallel without power injecting')
@@ -73,19 +73,19 @@ class ElectricUseData(models.Model):
     #     verbose_name=_('Electric consumption (kWh)')
     #     )
 
-	def __str__(self):
+# 	def __str__(self):
 
-		return self.projectname
+# 		return self.projectname
 
 
 
-class FuelUseData(models.Model):
+# class FuelUseData(models.Model):
     
-    projectname = models.ForeignKey(
-    	'SiteData',
-    	on_delete=models.CASCADE,
-    	null=True
-    	)
+#     projectname = models.ForeignKey(
+#     	'SiteData',
+#     	on_delete=models.CASCADE,
+#     	null=True
+#     	)
 
     fuel_type = (
         ('natural gas',_('natural gas')),
@@ -106,13 +106,13 @@ class FuelUseData(models.Model):
 
 
 
-class ThermalLoads(models.Model):
+# class ThermalLoads(models.Model):
 
-    projectname = models.ForeignKey(
-		'SiteData',
- 		on_delete=models.CASCADE,
- 		null=True
-		)
+#     projectname = models.ForeignKey(
+# 		'SiteData',
+#  		on_delete=models.CASCADE,
+#  		null=True
+# 		)
 
     load_type=(
 		('hot water',_('hot water')),
