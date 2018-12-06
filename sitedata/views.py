@@ -39,8 +39,15 @@ class SiteDataUpdate(UpdateView):
 def Result(request,pk):
 
 	site = get_object_or_404(SiteData,pk=pk)
+	power=site.ave_elec_demand_Jan
+
+	if site.grid_mode==1: #并网不上网
+       if power<500:
+       	model='J320'
+
 	context = {
 	'site':site,
+	'model':model,
 	}
 
 	return render(request,'result.html',context)
