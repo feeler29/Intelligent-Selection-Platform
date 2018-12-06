@@ -87,21 +87,21 @@ class SiteData(models.Model):
 #     	null=True
 #     	)
 
-    fuel_type = (
-        ('natural gas',_('natural gas')),
-        ('coal',_('coal')),
-        ('oil',_('oil')),
-    )
+    # fuel_type = (
+    #     ('natural gas',_('natural gas')),
+    #     ('coal',_('coal')),
+    #     ('oil',_('oil')),
+    # )
 
-    primaryfuel = models.CharField(
-        max_length=100,
-        choices=fuel_type,
-        blank=True,
-        )
+    # primaryfuel = models.CharField(
+    #     max_length=100,
+    #     choices=fuel_type,
+    #     blank=True,
+    #     )
 
-    def __str__(self):
+    # def __str__(self):
 
-         return self.projectname
+    #      return self.projectname
 
 
 
