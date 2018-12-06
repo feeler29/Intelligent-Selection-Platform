@@ -22,6 +22,7 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('enginedata/',include('enginedata.urls')),
+    path('sitedata/',include('sitedata.urls')),
     #path(r'^i18n/', include('django.conf.urls.i18n')),
  #   path('i18n/', include('django.conf.urls.i18n')),
 #home page is redirected to enginedata page, change later

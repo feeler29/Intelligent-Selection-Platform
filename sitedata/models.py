@@ -153,3 +153,7 @@ class ThermalLoads(models.Model):
     def __str__(self):
 
         return self.projectname
+
+
+class Result(models.Model):
+	pass

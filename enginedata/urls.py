@@ -8,3 +8,4 @@ urlpatterns = [
 	path('module/<int:pk>', views.ModuleDetailView.as_view(), name='module-detail'),
 	path('ts/<int:pk>', views.TSDetailView.as_view(), name='ts-detail'),
 ]
+
