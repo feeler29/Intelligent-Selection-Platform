@@ -43,12 +43,12 @@ def Result(request,pk):
 
 	site = get_object_or_404(SiteData,pk=pk)
 
-	projectname=site.projectname
-	#thermal = get_object_or_404(ThermalLoads,projectname=name)
-	electric = get_object_or_404(ElectricUseData,projectname='projectname')
+	
+	
+	
 
 	context = {
-	'electric':electric,
+	'site':site,
 	}
 
 	return render(request,'result.html',context)
