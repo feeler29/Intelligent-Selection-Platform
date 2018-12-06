@@ -14,6 +14,8 @@ class SiteDataCreate(CreateView):
 class SiteDataUpdate(UpdateView):
 	model = SiteData
 	fields = '__all__'
+	def get_absolute_url(self):
+		return reverse('result',kwargs={'pk':self.pk})
 
 # class ElectricDataCreate(CreateView):
 # 	model = ElectricUseData
@@ -36,17 +38,9 @@ class SiteDataUpdate(UpdateView):
 # 	#success_url = reverse_lazy('result')
 
 
-
-
-
 def Result(request,pk):
 
 	site = get_object_or_404(SiteData,pk=pk)
-
-	
-	
-	
-
 	context = {
 	'site':site,
 	}
