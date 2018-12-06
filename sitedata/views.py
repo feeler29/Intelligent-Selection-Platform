@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -29,3 +29,16 @@ class ThermalDataCreate(CreateView):
 	model = ThermalLoads
 	fields = '__all__'
 	success_url = reverse_lazy('result')
+
+def Result(request,pk):
+
+	site = get_object_or_404(SiteData,pk=pk)
+	electric = get_object_or_404(ElectricUseData,projectname='site.projectname')
+
+	context = {
+	'electric':electric,
+	}
+
+	return render(request,'result.html',context)
+
+
