@@ -7,6 +7,8 @@ from django.utils.translation import gettext_lazy as _
 
 class SiteData(models.Model):
 
+# site information 
+
 	projectname = models.CharField(
 		max_length=200,
 		verbose_name=_('Project name'),
@@ -40,18 +42,7 @@ class SiteData(models.Model):
 		)
 
 
-# 	def __str__(self):
-
-# 		return self.projectname
-
-
-# class ElectricUseData(models.Model):
-
-# 	projectname = models.ForeignKey(
-# 		'SiteData',
-# 		on_delete=models.CASCADE,
-# 		null=True
-# 		)
+# electric use data
 
 	grid_mode = models.BooleanField(
 		verbose_name=_('grid parallel without power injecting')
@@ -69,23 +60,12 @@ class SiteData(models.Model):
 		verbose_name=_('Peak electric demand January (kW)')
 		)
 
-	# elec_consum = models.FloatField(
-	#     verbose_name=_('Electric consumption (kWh)')
-	#     )
-
-# 	def __str__(self):
-
-# 		return self.projectname
+	elec_consum = models.FloatField(
+	    verbose_name=_('Electric consumption (kWh)')
+	    )
 
 
-
-# class FuelUseData(models.Model):
-	
-#     projectname = models.ForeignKey(
-#     	'SiteData',
-#     	on_delete=models.CASCADE,
-#     	null=True
-#     	)
+# fuel use data
 
 	fuel_type = (
 		('natural gas',_('natural gas')),
@@ -99,20 +79,8 @@ class SiteData(models.Model):
 		blank=True,
 		)
 
-	# def __str__(self):
 
-	#      return self.projectname
-
-
-
-
-# class ThermalLoads(models.Model):
-
-#     projectname = models.ForeignKey(
-# 		'SiteData',
-#  		on_delete=models.CASCADE,
-#  		null=True
-# 		)
+# thermal loads
 
 	load_type=(
 		('hot water',_('hot water')),
