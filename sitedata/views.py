@@ -9,7 +9,7 @@ from sitedata.models import SiteData
 class SiteDataCreate(CreateView):
 	model = SiteData
 	fields = '__all__'
-	success_url = reverse_lazy('site_data_update',kwargs={'pk':self.pk})
+	success_url = reverse_lazy('site_data_update',kwargs={'pk':model.pk})
 
 class SiteDataUpdate(UpdateView):
 	model = SiteData
