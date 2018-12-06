@@ -118,9 +118,7 @@ class SiteData(models.Model):
 		default=False
 		)
 
-	# def __str__(self):
 
-	# 	return self.projectname
 	def get_absolute_url(self):
 		return reverse('result',kwargs={'pk':self.pk})
 
