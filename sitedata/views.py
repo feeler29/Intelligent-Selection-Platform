@@ -28,12 +28,22 @@ class FuelDataCreate(CreateView):
 class ThermalDataCreate(CreateView):
 	model = ThermalLoads
 	fields = '__all__'
-	success_url = reverse_lazy('result',kwargs={'name':'ThermalLoads.projectname'})
+	success_url = reverse_lazy('thermal_data_update')
 
-def Result(request,name):
+class ThermalDataUpdate(UpdateView):
+	model = ThermalLoads
+	fields = '__all__'
+	#success_url = reverse_lazy('result')
 
-	thermal = get_object_or_404(ThermalLoads,projectname=name)
-	electric = get_object_or_404(ElectricUseData,projectname='thermal.projectname')
+
+
+
+
+def Result(request,pk):
+
+	site = get_object_or_404(SiteData,pk=pk)
+	#thermal = get_object_or_404(ThermalLoads,projectname=name)
+	electric = get_object_or_404(ElectricUseData,projectname='site.projectname')
 
 	context = {
 	'electric':electric,
