@@ -91,7 +91,7 @@ class SiteData(models.Model):
         ('natural gas',_('natural gas')),
         ('coal',_('coal')),
         ('oil',_('oil')),
-	)
+    )
 
     primaryfuel = models.CharField(
         max_length=100,
@@ -119,7 +119,7 @@ class SiteData(models.Model):
 		('process steam',_('process steam')),
 		('sterilization',_('sterilization')),
 		('space heating',_('space heating')),
-	)
+    )
  
     majorload = models.CharField(
  		max_length=100,
