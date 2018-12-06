@@ -1,6 +1,8 @@
 {% extends "base_generic.html" %}
+{% load i18n %}
 
 {% block content %}
+<h1>{% trans "Please input the thermal loads data" %}</h1>
   <form action="" method="post">
     {% csrf_token %}
     <table>
