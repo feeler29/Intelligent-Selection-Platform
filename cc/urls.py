@@ -30,7 +30,5 @@ urlpatterns = [
     #path('', RedirectView.as_view(url='/enginedata/', permanent=True)),
 
 ]
-# urlpatterns += i18n_patterns(
-#      path('', include('enginedata.urls')),
-#  )
+
 
