@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 
-from sitedata.models import SiteData, ElectricUseData, FuelUseData, ThermalLoads
+from sitedata.models import SiteData
 
 # class TechnicaldataAdmin(admin.ModelAdmin):
 # 	list_display = ('name','electrical_output','fuel_gas_type',)
@@ -9,6 +9,6 @@ from sitedata.models import SiteData, ElectricUseData, FuelUseData, ThermalLoads
 
 
 admin.site.register(SiteData)
-admin.site.register(ElectricUseData)
-admin.site.register(FuelUseData)
-admin.site.register(ThermalLoads)
+# admin.site.register(ElectricUseData)
+# admin.site.register(FuelUseData)
+# admin.site.register(ThermalLoads)
