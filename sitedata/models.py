@@ -69,9 +69,9 @@ class SiteData(models.Model):
 		verbose_name=_('Peak electric demand January (kW)')
 		)
 
-    # elec_consum = models.FloatField(
-    #     verbose_name=_('Electric consumption (kWh)')
-    #     )
+	# elec_consum = models.FloatField(
+	#     verbose_name=_('Electric consumption (kWh)')
+	#     )
 
 # 	def __str__(self):
 
@@ -80,28 +80,28 @@ class SiteData(models.Model):
 
 
 # class FuelUseData(models.Model):
-    
+	
 #     projectname = models.ForeignKey(
 #     	'SiteData',
 #     	on_delete=models.CASCADE,
 #     	null=True
 #     	)
 
-    fuel_type = (
-        ('natural gas',_('natural gas')),
-        ('coal',_('coal')),
-        ('oil',_('oil')),
-        )
+	fuel_type = (
+		('natural gas',_('natural gas')),
+		('coal',_('coal')),
+		('oil',_('oil')),
+		)
 
-    primaryfuel = models.CharField(
-        max_length=100,
-        choices=fuel_type,
-        blank=True,
-        )
+	primaryfuel = models.CharField(
+		max_length=100,
+		choices=fuel_type,
+		blank=True,
+		)
 
-    # def __str__(self):
+	# def __str__(self):
 
-    #      return self.projectname
+	#      return self.projectname
 
 
 
@@ -114,45 +114,45 @@ class SiteData(models.Model):
 #  		null=True
 # 		)
 
-    load_type=(
+	load_type=(
 		('hot water',_('hot water')),
 		('process steam',_('process steam')),
 		('sterilization',_('sterilization')),
 		('space heating',_('space heating')),
-        )
+		)
  
-    majorload = models.CharField(
- 		max_length=100,
- 		choices=load_type,
- 		blank=True,
- 		)
+	majorload = models.CharField(
+		max_length=100,
+		choices=load_type,
+		blank=True,
+		)
 
-    steamdemand_max = models.FloatField(
- 		verbose_name=_('Maximum Steam Demand (t/h)')
+	steamdemand_max = models.FloatField(
+		verbose_name=_('Maximum Steam Demand (t/h)')
 
- 		)
+		)
 
-    steamdemand_ave = models.FloatField(
- 		verbose_name=_('Average Steam Demand')
- 		)
+	steamdemand_ave = models.FloatField(
+		verbose_name=_('Average Steam Demand')
+		)
 
-    steam_temp = models.FloatField(
- 		verbose_name=_('Required Steam Temperature')
- 		)
+	steam_temp = models.FloatField(
+		verbose_name=_('Required Steam Temperature')
+		)
 
-    steam_press = models.FloatField(
- 		verbose_name=_('Required Steam Pressure')
- 		)
+	steam_press = models.FloatField(
+		verbose_name=_('Required Steam Pressure')
+		)
 
-    track = models.BooleanField(
- 		verbose_name=_('Track'),
- 		help_text=_('do themal loads generally track electric loads'),
- 		default=False
- 		)
+	track = models.BooleanField(
+		verbose_name=_('Track'),
+		help_text=_('do themal loads generally track electric loads'),
+		default=False
+		)
 
-    def __str__(self):
+	def __str__(self):
 
-        return self.projectname
+		return self.projectname
 
 
 class Result(models.Model):
