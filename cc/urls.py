@@ -18,7 +18,7 @@ from django.urls import path
 from django.views.generic import RedirectView
 from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
-from . import views
+from django.sitedata import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
