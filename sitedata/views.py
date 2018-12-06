@@ -6,26 +6,26 @@ from django.urls import reverse_lazy
 
 from sitedata.models import SiteData,ElectricUseData,FuelUseData,ThermalLoads
 
-class SiteDataCreat(CreatView):
+class SiteDataCreate(CreateView):
 	model = SiteData
 	fields = '__all__'
-	success_url = reverse_lazy('electric_data_creat')
+	success_url = reverse_lazy('electric_data_create')
 
 class SiteDataUpdate(UpdateView):
 	model = SiteData
 	fields = '__all__'
 
-class ElectricDataCreat(CreatView):
+class ElectricDataCreate(CreateView):
 	model = ElectricUseData
 	fields = '__all__'
-	success_url = reverse_lazy('fuel_data_creat')
+	success_url = reverse_lazy('fuel_data_create')
 
-class FuelDataCreat(CreatView):
+class FuelDataCreate(CreateView):
 	model = FuelUseData
 	fields = '__all__'
-	success_url = reverse_lazy('thermal_data_creat')
+	success_url = reverse_lazy('thermal_data_create')
 
-class ThermalDataCreat(CreatView):
+class ThermalDataCreate(CreateView):
 	model = ThermalLoads
 	fields = '__all__'
 	success_url = reverse_lazy('result')
