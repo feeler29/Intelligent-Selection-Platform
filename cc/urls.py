@@ -26,7 +26,7 @@ urlpatterns = [
     #path(r'^i18n/', include('django.conf.urls.i18n')),
  #   path('i18n/', include('django.conf.urls.i18n')),
 #home page is redirected to enginedata page, change later
-    path('', RedirectView.as_view(url='/enginedata/', permanent=True)),
+    #path('', RedirectView.as_view(url='/enginedata/', permanent=True)),
 
 ]
 # urlpatterns += i18n_patterns(
