@@ -18,12 +18,12 @@ from django.urls import path
 from django.views.generic import RedirectView
 from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
-from django.sitedata import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('enginedata/',include('enginedata.urls')),
-    #path('',include('sitedata.urls')),
+    path('sitedata/',sitedata.urls),
     #path(r'^i18n/', include('django.conf.urls.i18n')),
  #   path('i18n/', include('django.conf.urls.i18n')),
 #home page is redirected to enginedata page, change later
@@ -34,10 +34,3 @@ urlpatterns = [
 #      path('', include('enginedata.urls')),
 #  )
 
-urlpatterns += [
-    path('sitedata/',views.SiteDataCreate.as_view(), name='site_data_create'),
-    path('sitedata/<int:pk>/update',views.SiteDataUpdate.as_view(), name='site_data_update'),
-    path('electricdata/create',views.ElectricDataCreate.as_view(),name='electric_data_create'),
-    path('fueldata/create',views.FuelDataCreate.as_view(),name='fuel_data_create'),
-    path('thermaldata/create',views.ThermalDataCreate.as_view(),name='thermal_data_create'),
-]
