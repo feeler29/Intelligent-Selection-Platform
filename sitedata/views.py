@@ -44,10 +44,15 @@ def Result(request,pk):
 	if site.grid_mode==1: #并网不上网
 	   if power<500:
 		   model='J320'
+		   num='1'
+
+
+
 
 	context = {
 	'site':site,
 	'model':model,
+	'num':num,
 	}
 
 	return render(request,'result.html',context)
