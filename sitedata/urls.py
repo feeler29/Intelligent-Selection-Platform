@@ -8,5 +8,5 @@ urlpatterns = [
     path('electricdata/create',views.ElectricDataCreate.as_view(),name='electric_data_create'),
     path('fueldata/create',views.FuelDataCreate.as_view(),name='fuel_data_create'),
     path('thermaldata/create',views.ThermalDataCreate.as_view(),name='thermal_data_create'),
-    path('result/(?P<name>\w+)',views.Result,name='result'),
+    path('result/(?P<name>\w+)/$',views.Result,name='result'),
 ]
