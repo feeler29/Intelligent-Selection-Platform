@@ -42,8 +42,8 @@ def Result(request,pk):
 	power=site.ave_elec_demand_Jan
 
 	if site.grid_mode==1: #并网不上网
-       if power<500:
-       	model='J320'
+	   if power<500:
+		   model='J320'
 
 	context = {
 	'site':site,
