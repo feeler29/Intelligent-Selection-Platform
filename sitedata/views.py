@@ -28,7 +28,7 @@ class FuelDataCreate(CreateView):
 class ThermalDataCreate(CreateView):
 	model = ThermalLoads
 	fields = '__all__'
-	success_url = reverse_lazy('result',kwargs={'name':'projectname'})
+	success_url = reverse_lazy('result',kwargs={'name':'ThermalLoads.projectname'})
 
 def Result(request,name):
 
