@@ -4,6 +4,8 @@ from django.urls import reverse
 
 from django.utils.translation import gettext_lazy as _
 
+from django.core.validators import MaxValueValidator,MinValueValidator
+
 
 class SiteData(models.Model):
 
