@@ -106,7 +106,7 @@ class SiteData(models.Model):
 		validators=[MinValueValidator(0)]
 		)
 
-	ave_elec_demand_Otc = models.FloatField(
+	ave_elec_demand_Oct = models.FloatField(
 		verbose_name=_('Average electric demand October (kW)'),
 		validators=[MinValueValidator(0)]
 		)

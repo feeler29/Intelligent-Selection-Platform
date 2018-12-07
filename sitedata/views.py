@@ -6,6 +6,8 @@ from django.urls import reverse_lazy
 
 from sitedata.models import SiteData
 
+import numpy as np
+
 class SiteDataCreate(CreateView):
 	model = SiteData
 	fields = '__all__'
@@ -15,43 +17,37 @@ class SiteDataUpdate(UpdateView):
 	fields = '__all__'
 
 
-# class ElectricDataCreate(CreateView):
-# 	model = ElectricUseData
-# 	fields = '__all__'
-# 	success_url = reverse_lazy('fuel_data_create')
-
-# class FuelDataCreate(CreateView):
-# 	model = FuelUseData
-# 	fields = '__all__'
-# 	success_url = reverse_lazy('thermal_data_create')
-
-# class ThermalDataCreate(CreateView):
-# 	model = ThermalLoads
-# 	fields = '__all__'
-# 	success_url = reverse_lazy('thermal_data_update')
-
-# class ThermalDataUpdate(UpdateView):
-# 	model = ThermalLoads
-# 	fields = '__all__'
-# 	#success_url = reverse_lazy('result')
-
-
 def Result(request,pk):
 
 	site = get_object_or_404(SiteData,pk=pk)
-	power=site.ave_elec_demand_Jan
+	power=[site.ave_elec_demand_Jan,
+	site.ave_elec_demand_Feb,
+	site.ave_elec_demand_Mar,
+	site.ave_elec_demand_Apr,
+	site.ave_elec_demand_May,
+	site.ave_elec_demand_Jun,
+	site.ave_elec_demand_Jul,
+	site.ave_elec_demand_Aug,
+	site.ave_elec_demand_Sep,
+	site.ave_elec_demand_Oct,
+	site.ave_elec_demand_Nov,
+	site.ave_elec_demand_Dec,
+	]
+	model=['J312','J320','J420','J620','J624',]
+	
+	power_ave=np.average(power)
+
+	num=1
+	genset='J320'
 
 	if site.grid_mode==1: #并网不上网
-	   if power<500:
-		   model='J320'
-		   num='1'
-
-
-
+	   if power_ave<1000:
+		   genset=model[1]
+		   num=1
 
 	context = {
 	'site':site,
-	'model':model,
+	'genset':genset,
 	'num':num,
 	}
 
