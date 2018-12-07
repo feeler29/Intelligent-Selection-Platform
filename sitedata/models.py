@@ -192,8 +192,3 @@ class SiteData(models.Model):
 	def get_absolute_url(self):
 		return reverse('result',kwargs={'pk':self.pk})
 
-class Result(models.Model):
-	
-	
-
-	pass
