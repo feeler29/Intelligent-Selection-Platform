@@ -162,7 +162,7 @@ class SiteData(models.Model):
 	load_type=(
 		('hot water',_('hot water')),
 		('process steam',_('process steam')),
-		('both water and steam',_('bot water and steam')),
+		('both water and steam',_('both water and steam')),
 		('space heating',_('space heating')),
 		)
  
