@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-11 15:08+0800\n"
+"POT-Creation-Date: 2018-12-11 15:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,43 +136,51 @@ msgstr "煤"
 msgid "oil"
 msgstr "柴油"
 
-#: sitedata/models.py:163
+#: sitedata/models.py:157
+msgid "Primary fuel"
+msgstr "主要燃料"
+
+#: sitedata/models.py:164
 msgid "hot water"
 msgstr "热水"
 
-#: sitedata/models.py:164
+#: sitedata/models.py:165
 msgid "process steam"
 msgstr "工艺蒸汽"
 
-#: sitedata/models.py:165
-msgid "bot water and steam"
+#: sitedata/models.py:166
+msgid "both water and steam"
 msgstr "热水和蒸汽"
 
-#: sitedata/models.py:166
+#: sitedata/models.py:167
 msgid "space heating"
 msgstr "空间加热"
 
-#: sitedata/models.py:176
+#: sitedata/models.py:174
+msgid "Major loads"
+msgstr "主要热负荷"
+
+#: sitedata/models.py:178
 msgid "Maximum Steam Demand (t/h)"
 msgstr "最大蒸汽需求 (t/h)"
 
-#: sitedata/models.py:181
+#: sitedata/models.py:183
 msgid "Average Steam Demand"
 msgstr "平均蒸汽需求 (t/h)"
 
-#: sitedata/models.py:186
+#: sitedata/models.py:188
 msgid "Required Steam Temperature"
 msgstr "需求蒸汽温度 (°C)"
 
-#: sitedata/models.py:191
+#: sitedata/models.py:193
 msgid "Required Steam Pressure"
 msgstr "需求蒸汽压力 (MPa)"
 
-#: sitedata/models.py:196
+#: sitedata/models.py:198
 msgid "Track"
 msgstr "跟踪"
 
-#: sitedata/models.py:197
+#: sitedata/models.py:199
 msgid "do themal loads generally track electric loads"
 msgstr "热负荷是否跟踪电负荷变化"
 
