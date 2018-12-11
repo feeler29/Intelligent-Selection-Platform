@@ -154,6 +154,7 @@ class SiteData(models.Model):
 		max_length=100,
 		choices=fuel_type,
 		blank=True,
+		verbose_name=_('Primary fuel')
 		)
 
 
@@ -170,6 +171,7 @@ class SiteData(models.Model):
 		max_length=100,
 		choices=load_type,
 		blank=True,
+		verbose_name=_('Major loads')
 		)
 
 	steamdemand_max = models.FloatField(

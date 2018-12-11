@@ -73,68 +73,46 @@ msgid "Average electric demand January (kW)"
 msgstr "一月份平均电负荷(kW)"
 
 #: sitedata/models.py:80
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand February (kW)"
 msgstr "二月份平均电负荷(kW)"
 
 #: sitedata/models.py:85
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand March (kW)"
 msgstr "三月份平均电负荷(kW)"
 
 #: sitedata/models.py:90
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand April (kW)"
 msgstr "四月份平均电负荷(kW)"
 
 #: sitedata/models.py:95
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand May (kW)"
 msgstr "五月份平均电负荷(kW)"
 
 #: sitedata/models.py:100
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand June (kW)"
 msgstr "六月份平均电负荷(kW)"
 
 #: sitedata/models.py:105
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand July (kW)"
 msgstr "七月份平均电负荷(kW)"
 
 #: sitedata/models.py:110
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand August (kW)"
 msgstr "八月份平均电负荷(kW)"
 
 #: sitedata/models.py:115
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand September (kW)"
 msgstr "九月份平均电负荷(kW)"
 
 #: sitedata/models.py:120
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand October (kW)"
 msgstr "十月份平均电负荷(kW)"
 
 #: sitedata/models.py:125
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand November (kW)"
 msgstr "十一月份平均电负荷(kW)"
 
 #: sitedata/models.py:130
-#, fuzzy
-#| msgid "Average electric demand January (kW)"
 msgid "Average electric demand December (kW)"
 msgstr "十二月份平均电负荷(kW)"
 
