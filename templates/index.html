@@ -5,14 +5,14 @@
 {% block content %}
   <h1>{% trans "Knowledge Warehouse" %}</h1>
   <p>{% trans "Welcome to the K.W., a website developed by <em>Jereh Combined Energy</em>!" %}</p>
-  <h2>Dynamic content</h2>
-  <p>The database has the following record counts:</p>
+  <h2>{% trans "Dynamic content" %}</h2>
+  <p>{% trans "The database has the following record counts:" %}</p>
   <ul>
-    <li><strong>Modules:</strong> {{ num_modules }}</li>
-    <li><strong>Technical Specifications:</strong> {{ num_TS }}</li>
+    <li><strong>{% trans "Modules:" %}</strong> {{ num_modules }}</li>
+    <li><strong>{% trans "Technical Specifications:" %}</strong> {{ num_TS }}</li>
     <!-- <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li> -->
   </ul>
 
-  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+  <p>{% trans "You have visited this page" %} {{ num_visits }}{% if num_visits == 1 %} time{% else %} {% trans "times" %}{% endif %}.</p>
 {% endblock %}

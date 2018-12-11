@@ -2,7 +2,16 @@
 {% load i18n %}
 
 {% block content %}
-  <h1>Name: {{ site.projectname }}</h1>
-  <h1>Model: {{ genset }}</h1>
-  <h1>Number: {{ num }}</h1>
+  
+  <h1>{{ site.projectname }}项目的选型结果:</h1>
+  <h2>机组型号: {{ genset }},装机数量: {{ number }}</h2>
+ 
+   {{ div1 | safe }}
+   
 {% endblock %}
+
+{% block content1 %}
+
+   {{ script1 | safe }}
+
+ {% endblock %}

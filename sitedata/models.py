@@ -52,8 +52,18 @@ class SiteData(models.Model):
 
 # electric use data
 
+	# mode_type = (
+	# 	('1',_('grid parallel without power injecting')),
+	# 	('2',_('grid parallel with power injecting')),
+	# 	)
+
+
 	grid_mode = models.BooleanField(
-		verbose_name=_('grid parallel without power injecting')
+		verbose_name=_('grid parallel without power injection'),
+		# choices=mode_type,
+		# max_length=100,
+		default=1,
+		blank=False
 		)
 
 	service_voltage = models.FloatField(
@@ -152,7 +162,7 @@ class SiteData(models.Model):
 	load_type=(
 		('hot water',_('hot water')),
 		('process steam',_('process steam')),
-		('sterilization',_('sterilization')),
+		('both water and steam',_('bot water and steam')),
 		('space heating',_('space heating')),
 		)
  
