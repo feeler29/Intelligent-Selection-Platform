@@ -14,6 +14,8 @@ from bokeh.embed import components
 
 from django.utils.translation import gettext_lazy as _
 
+from scipy import interpolate as ipl
+
 class SiteDataCreate(CreateView):
     model = SiteData
     fields = '__all__'
@@ -30,7 +32,7 @@ def engineselection(power):
     engine=['J312','J316','J320','J420','J612','J620','J624']
 
     if power<350:
-        genset='not applicable'
+        genset=_('not applicable')
         number=0
 
     elif power in range(350,650):
@@ -149,12 +151,14 @@ def Result(request,pk):
             result=turbineselection(power)
 
 #绘制月用电功率图
+    x_month=np.linspace(1,12,100)
+    y_power=ipl.pchip_interpolate(month,power1,x_month)
     plot1 = figure(title='月平均用电功率', 
-        x_axis_label='月份', 
-        y_axis_label='功率', 
+        x_axis_label='时间(月)', 
+        y_axis_label='功率(kW)', 
         plot_width =600,
         plot_height =400)
-    plot1.line(month, power1, line_width = 2)
+    plot1.line(x_month, y_power, line_width = 2)
     script1,div1 = components(plot1)
 
 #传递参数到模板
