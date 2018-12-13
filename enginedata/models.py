@@ -93,27 +93,14 @@ class Technicaldata(models.Model):
 
 	engine_speed = models.IntegerField(help_text='rpm')
 
-	
-	# GASTYPE = (
-	# 	('NG','Natural gas'),
-	# 	('BG','Biogas'),
-	# 	('SG','Sewage gas'),
-	# 	('LG','Landfill gas'),
-	# 	('APG','Flaregas'),
-	# 	('CG','Coalmine gas'),
-	# 	('HD','HD-5 Propane'),
-	# )
+
 	fuel_gas_type = models.ForeignKey(
 		'Genre',
 		on_delete=models.SET_NULL,
 		null=True,
 	)
 
-	# fuel_gas_type = models.CharField(
-	# 	max_length=100,
-	# 	choices=GASTYPE,
-	# 	default='NG'
-	# 	)
+
 
 	class Meta:
 		ordering = ['fuel_gas_type','electrical_output']
